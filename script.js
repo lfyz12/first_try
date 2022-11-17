@@ -70,3 +70,7 @@ switch(numbers) {
         break;    
 }
 
+const u = {
+    name: 3,
+    age: 'fa'
+};
