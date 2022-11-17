@@ -1,0 +1,52 @@
+body, h1, h2, h3, h4, p, a {
+    font-size: 100%;
+    margin: 0;
+    font-weight: normal;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+}
+
+.header {
+    background-color: #2a19af;
+    height: 60vh;
+    text-align: center;
+}
+
+.header-title {
+    margin-top: 13vh;
+    text-transform: uppercase;
+    font-size: 120px;
+    font-weight: 500;
+    line-height: 80px;
+}
+
+.menu {
+    height: 8vh;
+    background-color: #062c94;
+    display: flex;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-list {
+    list-style-type: none;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.search {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+

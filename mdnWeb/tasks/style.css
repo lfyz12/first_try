@@ -1,0 +1,38 @@
+img {
+    padding: 0;
+    width: 500px;
+}
+
+/* a:active {
+    color: #ff0000
+} */
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-image: url('../images/cat.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+th, td {
+    border: 1px double #000000;
+    border-collapse: collapse;
+    border-radius: 10px;
+    border-color: #ff0000;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+}
+
+table {
+    margin-top: 10px;
+    margin-left: 700px; 
+    margin-bottom: 100px;
+    border: 1px double #ff0000;
+    border-spacing: 30px;
+}

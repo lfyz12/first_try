@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    background-color:#31567F;
+    font-size: 100%;
+    font-family: 'Comfortaa', cursive;
+}
+
+.header {
+    background-color: #B6BFE8;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.header-content {
+    box-sizing: border-box;
+    width: 51vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.logo {
+    display: flex;
+    color:#31567F;
+    max-width: 2vw;
+    align-self: center;
+}
+
+.search {
+    margin-left: 1%;
+    align-self: center;
+}
+
+#search-text {
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 2%;
+    border: 0;
+    height: 3vh;
+    width: 12vw;
+}
+
+.notif {
+    width: 1.2vw;
+    height: 2.2vh;
+    margin-left: 0.6vw;
+}
+
+.vidget {
+    margin-left: 1%;
+    color: #31567F;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.set {
+    margin-left: 26vw;
+}
+
+.setting-btn {
+    background-color: rgba(0,0,0,.0);
+    border: 0;
+}
+
+.setting-overlay:hover {
+    display: grid;
+    visibility: hidden;
+}
+
+.main {
+    margin: auto;
+    display: grid;
+    width: 51vw;
+    height: fit-content;
+    /* border: 1px solid black; */
+    box-sizing:border-box;
+}
+
+.profile {
+    display: flex;
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vh;
+    box-sizing: border-box;
+}
+
+.profile-image:hover {
+    border: 2px solid #fff;
+}
+
