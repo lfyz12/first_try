@@ -19,13 +19,56 @@
 //     helth: 400,
 //     armor: 100,
 //     sayHello() {
-//         console.log('Hello');
+//         console.log('Hello ' + this.helth);
 //     }
 // };
 
 // let jhon = Object.create(soldie);
 
 // jhon.armor = 12;
+
+// const henry = Object.create(soldie);
+// // Object.setPrototypeOf(henry, soldie);
+
+// const jake = Object.setPrototypeOf({}, soldie);
+
+// henry.sayHello();
+// jake.sayHello();
+// console.log(henry);
+// console.log(jake);
+// console.log(soldie);
+// console.log(jhon);
+
+// function Person(name, age, country) {
+//   this.name = name;
+//   this.age = age;
+//   this.country = country;
+
+//   this.presentSelf = () => {
+//     console.log('Hello my name is ' + this.name + ' I ' + this.age + ' y.o. and i from ' + this.country);
+//   };
+// }
+
+// const mike = new Person('Mike', 15, 'Russia');
+// const jastin = new Person('Jastin', 33, 'USA');
+// const alice = new Person('Alice', 29, 'United Kingdom');
+
+// mike.name = 'Leo';
+
+// console.log(mike);
+// mike.presentSelf();
+// console.log(jastin);
+// jastin.presentSelf();
+// console.log(alice);
+// alice.presentSelf();
+// for (let i = 1; i < 10+1;i++){
+//   console.log(i);
+// }
+
+// let c = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// let n = 101;
+// console.log(c.map((val, ind, self) => {if (self.indexOf(n%val === 0) === self.lastIndexOf(n%val === 0)) {return n;}}));
 
 // let k = '1006';
 
@@ -207,10 +250,47 @@
 
 //   romanToInt('MVIII');
 
-function isSolved(board) {
-  // TODO: Check if the board is solved!
- let check = [...board[0],...board[1],...board[2]];
- return console.log(check);
+// function isSolved(board) {
+//   // TODO: Check if the board is solved!
+//  let check = [...board[0],...board[1],...board[2]];
+//  return console.log(check);
+// }
+
+// isSolved([[1,1,1],[1,1,1],[1,1,1]]);
+
+// let a = 'dasdas134';
+// let re = /a/g;
+// console.log(a.re);
+
+// console.log(a.replace(re, +1));
+
+function counter() {
+  let count = 0;
+
+  let myFunc = function() {
+    count = count + 1;
+    return count;
+  };
+  
+  return myFunc;
 }
 
-isSolved([[1,1,1],[1,1,1],[1,1,1]]);
+let inc = counter();
+
+let c1 = inc();
+let c2 = inc();
+let c3 = inc();
+
+console.log(c1, c2, c3);
+
+
+let namer = 'Fal';
+
+function l() {
+  console.log(namer);
+}
+
+
+l();
+
+namer = 'alice';

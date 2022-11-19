@@ -1,8 +1,11 @@
-const card = document.querySelector('.info-card');
-console.log(card);
+const card = document.querySelectorAll('.info-card');
+
 const text = document.getElementById('text');
 
-card.addEventListener('click', function(e) {
-    e.target.style.backgroundColor = 'red';
-    document.body.style.backgroundColor = 'black';
-});
+for (let val of card) {
+    val.addEventListener('click', function() {
+        val.style.backgroundColor = '#000';
+        val.style.border = '1px solid #0f0';
+        text[0].style.color = '#fff';
+    });
+}
