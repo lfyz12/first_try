@@ -1,76 +1,129 @@
-let num;
-let str ="hello";
-let bol = false;
-let nul = null;
-let arr = ['sd', 3, {name: 4}, true];
-let obj = {
-    name: 'Rbn'
-};
+// function  pow(x, n) {
+//     let result = 1;
 
-// console.log(num);
+//     for (let i = 0; i < n; i++) {
+//         result *= x;
+//     }
 
-// if (str.length < 10) {
-//     console.log('a');
-// } else {
-//     console.log('s');
+//     return result;
 // }
 
-// if (str.length < 10) {
-//     console.log('a');
-// } if (str.length > 10){
-//     console.log('s');
-// } else if (str.length > 20){
-//     console.log('s');
+// function pow(x, n) {
+//     if (n === 1) {
+//         return 1;
+//     } else {
+//         return x * pow(x, n-1);
+//     }
 // }
 
-// for (let i = 0; i < 10; i++) {
-//     console.log(i);
-// 
+// console.log(pow(2, 8));
 
-let array = [1, 2, 3, 4, 5, 'd'];
+let students = {
+    js: [{
+        name: 'John',
+        progress: 100
+    }, {
+        name: 'Ivan',
+        progress: 60
+    }],
 
-for (let i = 0; i < array.length; i++) {
-    console.log(array[i]);
-}
+    html:{
+        basic: [{
+            name: 'Peter',
+            progress: 20
+        }, {
+            name: 'Ann',
+            progress: 18
+        }],
+        pro: [{
+            name: 'Sam',
+            progress: 10
+        }],
 
-
-
-
- let i = 0;
-do {
-    console.log(i);
-    i++;
-} while(i <10);
-
-let n = 10;
-
-if (n == '10') {
-    console.log(1);
-}
-
-let numbers = 50,
-    h = '3';
-
-let r = h + 'f';
-
-console.log(r);
-
-switch(numbers) {
-    case 49:
-        console.log('Error');
-        break;
-    case 100:
-        console.log('Error');
-        break;
-    case 50:
-        console.log('Ok!');
-        break;
-    default:
-        console.log('no cry');
-        break;    
-}
-
-const u = {
-    name: 3,
-    age: 'fa'
+        semi: {
+            students: [{
+                name: 'Test',
+                progress: 100
+            }]
+        }
+    }
 };
+
+
+function getTotalProfressByItearation(ata) {
+    let tota = 0;
+    let student = 0;
+    
+    for (let course of Object.values(ata)) {
+        if (Array.isArray(course)) {
+            student += course.length;
+
+            for (let i = 0; i < course.length; i++) {
+                tota += course[i].progress;
+            }
+        } else {
+            for (let subCourse of Object.values(course)) {
+                student += subCourse.length;   
+
+                
+                for (let i = 0; i < subCourse.length; i++) {
+                    tota += subCourse[i].progress;
+                }
+            }
+
+        }
+    }
+
+    return tota/student;
+}
+
+
+console.log(getTotalProfressByItearation(students));
+
+function getTotalProfressByRecursion(data) {
+    // console.log(data, ' first');
+    if (Array.isArray(data)) {
+        // console.log(data, ' second');
+        let total = 0;
+
+        for (let i = 0; i < data.length; i++) {
+            total += data[i].progress;
+        }
+        // console.log(data, ' third');
+
+        return [total, data.length];
+    } else {
+        // console.log(data, ' four');
+        let total = [0, 0];
+        for (let subdata of Object.values(data)) {
+            // console.log(subdata, ' subdata');
+            const subDataArr = getTotalProfressByRecursion(subdata);
+            total[0] += subDataArr[0];
+            total[1] += subDataArr[1];
+        }
+
+        return total;
+    }
+}
+
+const result = getTotalProfressByRecursion(students);
+
+console.log(result[0]/result[1]);
+// console.log(Object.values(students));
+
+
+
+
+function max(array) {
+    // Math.max.apply(), eat your heart out!
+    if (array.length === 0) {
+      return -Infinity;
+    }
+    
+    return array.sort((a, b) => {return a-b;})[array.length-1];
+  }
+
+
+console.log(max([1,2,1,56,7,12,43,89,34]));
+
+console.log(2 > undefined);
